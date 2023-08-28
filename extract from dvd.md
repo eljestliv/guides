@@ -42,8 +42,9 @@ You will also need this if you select Method 2 of deinterlacing:
 * In the third line of text, replace the example path to the path you just created. In my case, that’s `E:\assets\eurovision\restoration\1997\Deinterlaced`.
 * Save the file.
 * Run the file. Wait for the conversion to finish.
-
+<!---
 `ffmpeg -i "E:\assets\eurovision\restoration\1997\MakeMKV\B1_t00.mkv" -filter_complex "[0:v]yadif=mode=1[deinterlaced]" -map "[deinterlaced]" -map 0:a -ac 2 -sws_flags lanczos -c:v libx265 -crf 21 -c:a pcm_s24le -map_chapters -1 "E:\assets\eurovision\restoration\1997\Deinterlaced.mov"`
+--->
 
 ### Method 2 (QTGMC with Hybrid)
 
