@@ -6,7 +6,7 @@ To follow this tutorial, you will need:
 
 You will also need this if you select Method 1 of deinterlacing:
 * [FFmpeg](https://ffmpeg.org/)
-* [My BAT files](https://livlovisa.se/)
+* [My .bat-file for deinterlacing](https://github.com/eljestliv/guides/blob/main/Deinterlace%20with%20FFmpeg.bat)
 
 You will also need this if you select Method 2 of deinterlacing:
 * [Hybrid](https://www.selur.de/)
