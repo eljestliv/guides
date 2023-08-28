@@ -38,7 +38,7 @@ You will also need this if you select Method 2 of deinterlacing:
 --->
 * Create a new folder for your deinterlaced videos. In my case, that’s `E:\assets\eurovision\restoration\1997\Deinterlaced`.
 * Open the file named `Deinterlace with FFmpeg.bat` with a text editor. Don’t run it.
-* In the second line of text, replace the example path to the path where the MakeMKV output was placed.
+* In the second line of text, replace the example path to the path where the MakeMKV output was placed. In my case, that’s `E:\assets\eurovision\restoration\1997\MakeMKV`.
 * In the third line of text, replace the example path to the path you just created. In my case, that’s `E:\assets\eurovision\restoration\1997\Deinterlaced`.
 * Save the file.
 * Run the file. Wait for the conversion to finish.
