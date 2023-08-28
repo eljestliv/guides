@@ -1,5 +1,5 @@
 Setlocal EnableDelayedExpansion
-set INPUT=E:\assets\eurovision\restoration\1997\MakeMKV\Disc 1
+set INPUT=E:\assets\eurovision\restoration\1997\MakeMKV
 set OUTPUT=E:\assets\eurovision\restoration\1997\Deinterlaced
 
 :: encode video:
