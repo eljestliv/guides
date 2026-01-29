@@ -354,8 +354,4 @@ ffmpeg -hide_banner `
 
 # WORK IN PROGRESS
 
-Let’s say we want to convert a file from JPG to PNG,\
-the two most well-supported image formats, and an easy example\
-since it doesn’t require more than an input and an output.
-
 ********************************************************************************************************************************
