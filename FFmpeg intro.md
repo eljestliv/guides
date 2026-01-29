@@ -149,9 +149,7 @@ erase what’s there, and type `pwsh` and hit Enter.\
 
 A new window will open, and this is how we access FFmpeg.
 
-  •  •  •
-
-To verify that our install went correctly, simply type `ffmpeg` and hit enter.\
+To verify that our installation went correctly, simply type `ffmpeg` and hit enter.\
 The console will reply with the following if everything went correctly.
 ```pwsh
 PS E:\configs-programs\ffmpeg> ffmpeg
