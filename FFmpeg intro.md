@@ -182,8 +182,8 @@ ffmpeg -i $input $output
 ```
 Note that when I say `$input`, this is where you should substitute your own input.\
 The `$` is not supposed to be there in the final command.\
-I recommend putting it in quotes, otherwise spaces could be misinterpreted by the program.
-So if my input is `video.mp4`, and the example command asks for `$input`, you actually put in `"video.mp4"`.
+I recommend putting it in quotes, otherwise spaces could be misinterpreted by the program.\
+So if my input is `video.mp4`, and the example command asks for `$input`, you actually write `"video.mp4"`.
 
 ********************************************************************************************************************************
 
