@@ -84,6 +84,8 @@ are all examples of different containers that you may have seen.
 
 ********************************************************************************************************************************
 
+# What is FFmpeg?
+
 That’s all well and good, but does it really matter to the end user?\
 They just want the video to work, after all.  Hence, in most cases,\
 video editing software just takes care of this in the background automatically.  
@@ -169,6 +171,17 @@ usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfi
 Use -h to get full help or, even better, run 'man ffmpeg'
 PS E:\configs-programs\ffmpeg>
 ```
+
+********************************************************************************************************************************
+
+# How do I actually use FFmpeg?
+
+The very basics of an FFmpeg command looks like this:
+```pwsh
+ffmpeg -i $input $output
+```
+Note that when I say `$input`, this is where you should substitute your own input.\
+The `$` is not supposed to be there in the final command.
 
 ********************************************************************************************************************************
 
