@@ -322,6 +322,34 @@ Now, we have the file `output.png` in the directory we ran the command from, in 
 
   •  •  •
 
+Let’s now scale it down to a resolution of 600×600 before converting.\
+For this, we’ll use `-vf`, meaning video filter.
+
+```pwsh
+ffmpeg -hide_banner `
+	-i "input.jpg" `
+	-vf "scale=600:600" `
+	"output.png"
+```
+
+Note that it’ll prompt you if you want to overwrite the previous file,\
+in this case we do, so we type `y` (or simply append `-y` to the original command).
+
+  •  •  •
+
+Actually no, let’s crop that down first,\
+to 700×700, with an offset of 24×16 from the top left corner,\
+_then_ scale it down to 600×600.
+
+We can chain multiple filters together with commas.
+
+```pwsh
+ffmpeg -hide_banner `
+	-i "input.jpg" `
+	-vf "crop=700:700:24:16,scale=600:600" `
+	"output.png" -y
+```
+
 ********************************************************************************************************************************
 
 # WORK IN PROGRESS
