@@ -186,7 +186,7 @@ I recommend putting it in quotes, otherwise spaces could be misinterpreted by th
 So if my input is `video.mp4`, and the example command asks for `$input`, you actually write `"video.mp4"`.
 
 And another thing, Powershell has a way of splitting commands across multiple lines\
-which makes it a whole lot more readable, if you end every line except the last with a backtick `\`.
+which makes it a whole lot more readable, if you end every line except the last with a backtick.
 
 ```pwsh
 
@@ -203,6 +203,46 @@ which makes it a whole lot more readable, if you end every line except the last 
 		-i $input
 		$output
 ```
+
+I would also advise running the program with `-hide_banner` enabled, since it shows a bunch of\
+debug information by default which just clutters up the screen.  Typing that out every time\
+gets annoying, and that’s why having that text file to copy and paste from is so useful.
+
+It might not look that bad if you have line breaking disabled,\
+but if you have it enabled, compare this…
+```pwsh
+PS E:\configs-programs\ffmpeg> ffmpeg
+ffmpeg version 2026-01-29-git-c898ddb8fe-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-cairo --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-liboapv --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libsvtjpegxs --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-openal --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint --enable-whisper
+  libavutil      60. 24.100 / 60. 24.100
+  libavcodec     62. 23.103 / 62. 23.103
+  libavformat    62.  8.102 / 62.  8.102
+  libavdevice    62.  2.100 / 62.  2.100
+  libavfilter    11. 11.101 / 11. 11.101
+  libswscale      9.  3.100 /  9.  3.100
+  libswresample   6.  2.100 /  6.  2.100
+Universal media converter
+usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+
+Use -h to get full help or, even better, run 'man ffmpeg'
+PS E:\configs-programs\ffmpeg>
+```
+…to this! So much cleaner and easy to understand.
+```
+PS E:\configs-programs> ffmpeg -hide_banner
+Universal media converter
+usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+
+Use -h to get full help or, even better, run 'man ffmpeg'
+PS E:\configs-programs>
+
+```
+
+  •  •  •
+
+Let’s say we want to convert a file from JPG to PNG,\
+the two most well-supported image formats.
 
 ********************************************************************************************************************************
 
