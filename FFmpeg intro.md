@@ -186,7 +186,7 @@ I recommend putting it in quotes, otherwise spaces could be misinterpreted by th
 So if my input is `video.mp4`, and the example command asks for `$input`, you actually write `"video.mp4"`.
 
 And another thing, Powershell has a way of splitting commands across multiple lines\
-which makes it a whole lot more readable, if you end every line except the last with a backtick (\`).
+which makes it a whole lot more readable, if you end every line except the last with a backtick ` \` `.
 
 ```pwsh
 
