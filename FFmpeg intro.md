@@ -98,8 +98,7 @@ to using the command line, as I was when I started using it,\
 it can be really confusing and filled with tech jargon.\
 Don’t worry, I got you.
 
-Oh, and I’m assuming you’re running Windows 10 or 11 like\
-a normal person for this guide. If you’re on Mac or Linux—\
+I will be assuming you’re running Windows 10 or 11 for this guide.
 
   •  •  •
 
