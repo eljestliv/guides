@@ -281,7 +281,7 @@ I’m just saying it so it’s there if you _do_ want to.
 We’ve now opened an input file to see what it’s made out of,\
 but let’s try converting a file from one format to another.
 
-Let’s say from JPG to PNG,\ the two most well-supported image formats,\
+Let’s say from JPG to PNG, the two most well-supported image formats,\
 and an easy example since it doesn’t require more than an input and an output.
 
 ```pwsh
