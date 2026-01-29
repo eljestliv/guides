@@ -36,7 +36,9 @@ the faster the animation seems to go.
 Video works just the same, especially if we want it to stay in sync with audio.  
 We express this **framerate** as a fraction of how many frames are to be flipped through in how many seconds.  
 For instance, 25⁄1 means 25 frames in 1 second, or 25 FPS.  
-The reason why we also specify the denominator is because there are also more complicated framerates that are not expressed in terms of 1 second, like 24000⁄1001, which is and irrational number when expressed in terms of FPS: 23.~~976023~~.
+The reason why we also specify the denominator is because there are also more complicated framerates\
+that are not expressed in terms of 1 second, like 24000⁄1001, which is an\
+irrational number when expressed in terms of frames per second: 23.~~976023~~ FPS.
 
   •  •  •  
 
@@ -46,26 +48,31 @@ It samples this at 44 100 times per second, which captures the entire range of 
 
   •  •  •  
 
-Let’s consider a 60 second clip like this.  
-Its video has a bit depth of 8, a resolution of 720×576, a framerate of 25 FPS, and its audio has a sample rate of 44 100 samples per second at 16 bits.  
+Let’s consider a 60 second clip like this.
+
+Its video has a bit depth of 8, a resolution of 720×576, a framerate of 25 FPS,\
+and its audio has a sample rate of 44 100 samples per second at 16 bits.
+
 Using some math, we can calculate the amount of information necessary to store all that.  
 * **Video:** 8 bits * 3 colours * 720 pixels * 576 pixels * 25⁄1 frames per second * 60 seconds = 14 929 920 000 bits  
 * **Audio:** 16 bits * 44 100 samples per second * 60 seconds = 42 336 000 bits  
 * **Total:** 14 929 920 000 + 42 336 000 = 14 972 256 000 bits = **1.743 gigabytes**
 
-1.743 GiB for a 1 minute clip is about as wasteful as it gets, and very impractical since some people have internet connections that can barely handle 1⁄1000 of that.  
-So, that bit rate is gonna need to be cut down.
+1.743 GiB for a 1 minute clip is about as wasteful as it gets, and very impractical since\
+some people have internet connections that can barely handle 1⁄1000 of that.  
+That bit rate is gonna need to be cut down.
 
   •  •  •  
 
 Fortunately, some very clever people have developed ways to cut down the amount of storage space needed to store these.
 
-We call this a codec. There are many different video codecs and many different audio codecs, with their own pros and cons.  
-In order to play back a video file, where you both see a moving image and hear audio at the same time, we’re gonna have to package these two codecs together.  
-We call this package a container.
+We call this a codec. There are many different video codecs and many different audio codecs, with their own pros and cons.\
+In order to play back a video file, where you both see a moving image and hear audio at the same time,\
+we’re gonna have to package these two codecs together.  We call this package a container.
 
-You’re probably familiar with a few containers, without knowing their names, since they’re the ones that determine the file extension of the file on your computer.  
-For instance, MPEG-4 (`.mp4`), QuickTime (`.mov`), or Audio Video Interleave (`.avi`) are all examples of different containers that you may have seen.
+You’re probably familiar with a few containers, without knowing their names, since they’re the ones that determine\
+the file extension of the file on your computer.  For instance, MPEG-4 (`.mp4`), QuickTime (`.mov`), or Audio Video Interleave (`.avi`)\
+are all examples of different containers that you may have seen.
 
 ********************************************************************************************************************************
 
