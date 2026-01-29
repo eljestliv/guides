@@ -185,6 +185,25 @@ The `$` is not supposed to be there in the final command.\
 I recommend putting it in quotes, otherwise spaces could be misinterpreted by the program.\
 So if my input is `video.mp4`, and the example command asks for `$input`, you actually write `"video.mp4"`.
 
+And another thing, Powershell has a way of splitting commands across multiple lines\
+which makes it a whole lot more readable, if you end every line (except the last) with `\``.
+
+```pwsh
+
+# CORRECT
+	ffmpeg -i $input $output
+
+# CORRECT
+	ffmpeg `
+		-i $input `
+		$output
+
+# INCORRECT
+	ffmpeg
+		-i $input
+		$output
+```
+
 ********************************************************************************************************************************
 
 # WORK IN PROGRESS
