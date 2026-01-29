@@ -1,3 +1,9 @@
+### Note
+If you’ve found this on Google, looking for decent FFmpeg tutorials written by actual experts, this one probably isn’t for you.\
+I’m just writing this as an intermediate user to introduce the program to friends.
+
+********************************************************************************************************************************
+
 Before we can dive into editing video, we have to understand what video really _is_.\
 It may sound kinda silly when put this plainly, but it’s important that we grasp these fundamentals first.
   
@@ -76,6 +82,11 @@ are all examples of different containers that you may have seen.
 
 ********************************************************************************************************************************
 
-#	WORK IN PROGRESS
+That’s all well and good, but does it really matter to the end user?\
+They just want the video to work, after all.  Hence, in most cases,\
+video editing software just takes care of this in the background automatically.  
+
+But what if we _do_ want control over all these variables?\
+Enter **FFmpeg**, the most versitile video editor there is.
 
 ********************************************************************************************************************************
