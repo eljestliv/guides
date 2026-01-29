@@ -320,6 +320,8 @@ PS Q:\assets\misc>
 
 Now, we have the file `output.png` in the directory we ran the command from, in my case `Q:\assets\misc`.
 
+From now on, I won’t post the output unless I wanna specifically highlight something, since I think you get the jist.
+
   •  •  •
 
 Let’s now scale it down to a resolution of 600×600 before converting.\
