@@ -4,6 +4,8 @@ I’m just writing this as an intermediate user to introduce the program to frie
 
 ********************************************************************************************************************************
 
+## What is video?
+
 Before we can dive into editing video, we have to understand what video really _is_.\
 It may sound kinda silly when put this plainly, but it’s important that we grasp these fundamentals first.
   
