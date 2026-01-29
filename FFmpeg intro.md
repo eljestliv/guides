@@ -1,33 +1,37 @@
-Before we can dive into editing video, we have to understand what video really _is_.  
+Before we can dive into editing video, we have to understand what video really _is_.\
 It may sound kinda silly when put this plainly, but it’s important that we grasp these fundamentals first.
   
-What we call a “video” is a series of still images, and an audio waveform, played at the same time.  
+What we call a “video” is a series of still images, and an audio waveform, played at the same time.\
 But what _is_ a still image?
 
   •  •  •  
 
-Consider a pixel.  
-Every pixel on your monitor is made up of three smaller subpixels. One each of red, green, and blue.  
-Depending on their combinations of brightnesses, they mix into the colour we see.  
+Consider a pixel.
+
+Every pixel on your monitor is made up of three smaller subpixels. One each of red, green, and blue.\
+Depending on their combinations of brightnesses, they mix into the colour we see.\
 But what numbers are these? If 0 is its minimum value, what’s its maximum?
 
-The most common way of storing these is a scale from 1 to 2⁸, since computers really like powers of 2, and we therefore have a scale between 1 and 256.  
+The most common way of storing these is a scale from 1 to 2⁸, since computers really like powers of 2,\
+and we therefore have a scale between 1 and 256.\
 (Well, actually from 0 to 255, since computers count from zero.)
 
 This means the pixel has a **bit depth** of 8.  
 
   •  •  •  
 
-Well, how many pixels do we need to make an image?  
-Let’s imagine a grid of pixels that are 720px wide, and 576px tall.  
-That means the video has a **resolution** of 720×576, which is the standard that DVDs use.  
-We can also express this by only stating its vertical resolution (576p) and its **aspect ratio**, which is the ratio between its vertical resolution (in this case 720⁄576 = 5⁄4).
+Well, how many pixels do we need to make an image?
+
+Let’s imagine a grid of pixels that are 720px wide, and 576px tall.\
+That means the video has a **resolution** of 720×576, which is the standard that DVDs use.\
+We can also express this by only stating its vertical resolution (576p) and its **aspect ratio**,\
+which is the ratio between its vertical resolution (in this case 720⁄576 = 5⁄4).
 
   •  •  •  
 
-Now that we have imagined a single still image, let’s put it in motion.  
-Think of [flip book animation](https://commons.wikimedia.org/wiki/File:Flip_Book_-_Messi_Example.webm).  
-The faster you flip through the pages, the faster the animation seems to go.
+Now that we have imagined a single still image, let’s put it in motion.\
+Think of [flip book animation](https://commons.wikimedia.org/wiki/File:Flip_Book_-_Messi_Example.webm). The faster you flip through the pages,\
+the faster the animation seems to go.
 
 Video works just the same, especially if we want it to stay in sync with audio.  
 We express this **framerate** as a fraction of how many frames are to be flipped through in how many seconds.  
