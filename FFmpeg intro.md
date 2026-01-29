@@ -32,7 +32,7 @@ The faster you flip through the pages, the faster the animation seems to go.
 Video works just the same, especially if we want it to stay in sync with audio.  
 We express this **framerate** as a fraction of how many frames are to be flipped through in how many seconds.  
 For instance, 25⁄1 means 25 frames in 1 second, or 25 FPS.  
-The reason why we also specify the denominator is because there are also more complicated framerates that are not expressed in terms of 1 second, like 24000⁄1001, which is and irrational number when expressed in terms of FPS: 23.9̅7̅6̅0̅2̅3̅.
+The reason why we also specify the denominator is because there are also more complicated framerates that are not expressed in terms of 1 second, like 24000⁄1001, which is and irrational number when expressed in terms of FPS: 23.~~976023~~.
 
   •  •  •  
 
@@ -49,7 +49,7 @@ Using some math, we can calculate the amount of information necessary to store a
 * **Audio:** 16 bits * 44 100 samples per second * 60 seconds = 42 336 000 bits  
 * **Total:** 14 929 920 000 + 42 336 000 = 14 972 256 000 bits = **1.743 gigabytes**
 
-1.743 GiB for a 1 minute clip is about as wasteful as it gets, and very impractical since some people have internet connections that can barely handle 1⁄100 of that.  
+1.743 GiB for a 1 minute clip is about as wasteful as it gets, and very impractical since some people have internet connections that can barely handle 1⁄1000 of that.  
 So, that bit rate is gonna need to be cut down.
 
   •  •  •  
