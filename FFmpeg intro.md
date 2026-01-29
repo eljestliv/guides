@@ -268,7 +268,9 @@ Its codec is MPEG-2, its colour space is YUV with a chroma subsampling of 4:2:0,
 it’s colour range is TV-limited, in the SMPTE-170 colour space,\
 with Rec.709 colour primaries, and transfer characteristics.\
 It’s progressive, meaning it shows the entire image at once.\
-Its resolution is 704×576, its bitrate is 9001 kb/s, and its framerate is 25 FPS.
+Its resolution is 704×576, and the pixel making up that image are skewed\
+horizontally by a factor of 12:11, resulting in a final aspect ratio of 4:3.
+Its bitrate is 9001 kb/s, and its framerate is 25 FPS.
 
   •  •  •
 
