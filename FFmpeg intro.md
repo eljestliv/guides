@@ -269,14 +269,58 @@ it’s colour range is TV-limited, in the SMPTE-170 colour space,\
 with Rec.709 colour primaries, and transfer characteristics.\
 It’s progressive, meaning it shows the entire image at once.\
 Its resolution is 704×576, and the pixel making up that image are skewed\
-horizontally by a factor of 12:11, resulting in a final aspect ratio of 4:3.
+horizontally by a factor of 12:11, resulting in a final aspect ratio of 4:3.\
 Its bitrate is 9001 kb/s, and its framerate is 25 FPS.
+
+That was a lot to take in, I know.\
+You don’t need to learn all that,\
+I’m just saying it so it’s there if you _do_ want to.
 
   •  •  •
 
-Let’s say we want to convert a file from JPG to PNG,\
-the two most well-supported image formats, and an easy example\
-since it doesn’t require more than an input and an output.
+We’ve now opened an input file to see what it’s made out of,\
+but let’s try converting a file from one format to another.
+
+Let’s say from JPG to PNG,\ the two most well-supported image formats,\
+and an easy example since it doesn’t require more than an input and an output.
+
+```pwsh
+ffmpeg -hide_banner `
+	-i "input.jpg" `
+	"output.png"
+```
+
+This will produce:
+
+```pwsh
+PS Q:\assets\misc> ffmpeg -hide_banner `
+>>     -i "input.jpg" `
+>>     "output.png"
+Input #0, image2, from 'input.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 416305 kb/s
+  Stream #0:0: Video: mjpeg (Baseline), yuvj444p(pc, bt470bg/unknown/unknown), 1400x1400 [SAR 600:600 DAR 1:1], 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (mjpeg (native) -> png (native))
+Press [q] to stop, [?] for help
+[swscaler @ 000001fd27865d80] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to 'output.png':
+  Metadata:
+    encoder         : Lavf62.8.102
+  Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown, progressive), 1400x1400 [SAR 1:1 DAR 1:1], q=2-31, 200 kb/s, 25 fps, 25 tbn
+    Metadata:
+      encoder         : Lavc62.23.103 png
+    Side data:
+      EXIF metadata: (78 bytes)
+[image2 @ 000001fd27829f80] The specified filename 'output.png' does not contain an image sequence pattern or a pattern is invalid.
+[image2 @ 000001fd27829f80] Use a pattern such as %03d for an image sequence or use the -update option (with -frames:v 1 if needed) to write a single image.
+[out#0/image2 @ 000001fd27829e80] video:3338KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=0.284x elapsed=0:00:00.14
+PS Q:\assets\misc>
+```
+
+Now, we have the file `output.png` in the directory we ran the command from, in my case `Q:\assets\misc`.
+
+  •  •  •
 
 ********************************************************************************************************************************
 
