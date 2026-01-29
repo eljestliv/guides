@@ -204,12 +204,15 @@ which makes it a whole lot more readable, if you end every line except the last 
 		$output
 ```
 
+  •  •  •
+
 I would also advise running the program with `-hide_banner` enabled, since it shows a bunch of\
 debug information by default which just clutters up the screen.  Typing that out every time\
 gets annoying, and that’s why having that text file to copy and paste from is so useful.
 
 It might not look that bad if you have line breaking disabled,\
 but if you have it enabled, compare this…
+
 ```pwsh
 PS E:\configs-programs\ffmpeg> ffmpeg
 ffmpeg version 2026-01-29-git-c898ddb8fe-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
@@ -228,8 +231,10 @@ usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfi
 Use -h to get full help or, even better, run 'man ffmpeg'
 PS E:\configs-programs\ffmpeg>
 ```
+
 …to this! So much cleaner and easy to understand.
-```
+
+```pwsh
 PS E:\configs-programs> ffmpeg -hide_banner
 Universal media converter
 usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
