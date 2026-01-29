@@ -146,8 +146,8 @@ Let’s head back to the FFmpeg install folder, the one without the specific ver
 In my case, that’s `E:\configs-programs\ffmpeg`.
 
 Double click the address bar (where you copied the path from earlier),\
-erase what’s there, and type `pwsh` and hit Enter.\
-(If it doesn’t work, try typing `powershell` instead.
+erase what’s there, and type `pwsh` and hit Enter,\
+(if it doesn’t work, try typing `powershell` instead).
 
 A new window will open, and this is how we access FFmpeg.
 
