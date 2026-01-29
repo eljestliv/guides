@@ -10,8 +10,10 @@ Consider a pixel.
 Every pixel on your monitor is made up of three smaller subpixels. One each of red, green, and blue.  
 Depending on their combinations of brightnesses, they mix into the colour we see.  
 But what numbers are these? If 0 is its minimum value, what’s its maximum?  
+
 The most common way of storing these is a scale from 1 to 2⁸, since computers really like powers of 2, and we therefore have a scale between 1 and 256.  
--# Well, actually from 0 to 255, since computers count from zero.  
+(Well, actually from 0 to 255, since computers count from zero.)
+
 This means the pixel has a **bit depth** of 8.  
 
   •  •  •  
