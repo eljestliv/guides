@@ -46,7 +46,7 @@ We express this **framerate** as a fraction of how many frames are to be flipped
 For instance, 25⁄1 means 25 frames in 1 second, or 25 FPS.  
 The reason why we also specify the denominator is because there are also more complicated framerates\
 that are not expressed in terms of 1 second, like 24000⁄1001, which is an\
-irrational number when expressed in terms of frames per second: 23.~~976023~~ FPS.
+has a bunch of repeating decimals when expressed in terms of frames per second: 23.~~976023~~ FPS.
 
   •  •  •
 
@@ -176,9 +176,11 @@ PS E:\configs-programs\ffmpeg>
 
 # How do I actually use FFmpeg?
 
+Before we start looking at converting files, let’s use what we’ve learned to look at an already existing video file.
+
 The very basics of an FFmpeg command looks like this:
 ```pwsh
-ffmpeg -i $input $output
+ffmpeg -i $input
 ```
 Note that when I say `$input`, this is where you should substitute your own input.\
 The `$` is not supposed to be there in the final command.\
@@ -203,8 +205,6 @@ which makes it a whole lot more readable, if you end every line except the last 
 		-i $input
 		$output
 ```
-
-  •  •  •
 
 I would also advise running the program with `-hide_banner` enabled, since it shows a bunch of\
 debug information by default which just clutters up the screen.  Typing that out every time\
@@ -246,11 +246,42 @@ PS E:\configs-programs>
 
   •  •  •
 
+Anyway, let’s run that command on our input file.
+This is a simplified version of what you’ll see in the output.
+
+```pwsh
+PS Q:\> ffmpeg -hide_banner -i "input.mov"
+Input #0, from 'input.mov':
+  Duration: 00:02:56.49
+  Stream #0:0 Video: mpeg2video, yuv420p(tv, smpte170m/bt709/bt709, progressive), 704x576 [PAR 12:11 DAR 4:3], 9001 kb/s, 25 fps
+PS Q:\>
+```
+
+The first line tells us our 1st input (which from now on in this guide is 0th, since computers count from 0),\
+which is of course the only file we specified, then its duration and starting timestamp.
+
+Then it lists all the streams in the video. You **do not** need to know the specifics here,\
+I’m just meaning to explain what all these random numbers and letters mean.
+
+The 0th input in the 0th stream is `0:0`, and that’s the video stream.\
+Its codec is MPEG-2, its colour space is YUV with a chroma subsampling of 4:2:0,\
+it’s colour range is TV-limited, in the SMPTE-170 colour space,\
+with Rec.709 colour primaries, and transfer characteristics.\
+It’s progressive, meaning it shows the entire image at once.\
+Its resolution is 704×576, its bitrate is 9001 kb/s, and its framerate is 25 FPS.
+
+  •  •  •
+
 Let’s say we want to convert a file from JPG to PNG,\
-the two most well-supported image formats.
+the two most well-supported image formats, and an easy example\
+since it doesn’t require more than an input and an output.
 
 ********************************************************************************************************************************
 
 # WORK IN PROGRESS
+
+Let’s say we want to convert a file from JPG to PNG,\
+the two most well-supported image formats, and an easy example\
+since it doesn’t require more than an input and an output.
 
 ********************************************************************************************************************************
