@@ -12,7 +12,7 @@ It may sound kinda silly when put this plainly, but it’s important that we gra
 What we call a “video” is a series of still images, and an audio waveform, played at the same time.\
 But what _is_ a still image?
 
-  •  •  •  
+  •  •  •
 
 Consider a pixel.
 
@@ -26,7 +26,7 @@ and we therefore have a scale between 1 and 256.\
 
 This means the pixel has a **bit depth** of 8.  
 
-  •  •  •  
+  •  •  •
 
 Well, how many pixels do we need to make an image?
 
@@ -35,7 +35,7 @@ That means the video has a **resolution** of 720×576, which is the standard tha
 We can also express this by only stating its vertical resolution (576p) and its **aspect ratio**,\
 which is the ratio between its vertical resolution (in this case 720⁄576 = 5⁄4).
 
-  •  •  •  
+  •  •  •
 
 Now that we have imagined a single still image, let’s put it in motion.\
 Think of [flip book animation](https://commons.wikimedia.org/wiki/File:Flip_Book_-_Messi_Example.webm). The faster you flip through the pages,\
@@ -48,13 +48,13 @@ The reason why we also specify the denominator is because there are also more co
 that are not expressed in terms of 1 second, like 24000⁄1001, which is an\
 irrational number when expressed in terms of frames per second: 23.~~976023~~ FPS.
 
-  •  •  •  
+  •  •  •
 
 Let’s do the same thing with audio.  
 A standard CD saves a snapshot of audio data at a bit rate of 16 bits.  
 It samples this at 44 100 times per second, which captures the entire range of hearing that humans have.
 
-  •  •  •  
+  •  •  •
 
 Let’s consider a 60 second clip like this.
 
@@ -70,7 +70,7 @@ Using some math, we can calculate the amount of information necessary to store a
 some people have internet connections that can barely handle 1⁄1000 of that.  
 That bit rate is gonna need to be cut down.
 
-  •  •  •  
+  •  •  •
 
 Fortunately, some very clever people have developed ways to cut down the amount of storage space needed to store these.
 
@@ -90,5 +90,50 @@ video editing software just takes care of this in the background automatically.
 
 But what if we _do_ want control over all these variables?\
 Enter **FFmpeg**, the most versitile video editor there is.
+
+  •  •  •
+
+How do I install this software? When you’re totally new\
+to using the command line, as I was when I started using it,\
+it can be really confusing and filled with tech jargon.\
+Don’t worry, I got you.
+
+Oh, and I’m assuming you’re running Windows 10 or 11 like\
+a normal person for this guide. If you’re on Mac or Linux—\
+
+  •  •  •
+
+Before we even start with FFmpeg though, first I should recommend\
+downloading [Notepad++](https://notepad-plus-plus.org/downloads/) and make a `.txt` file\
+to save FFmpeg commands in.  Being able to copy and paste commands is a _massive_ quality of life improvement.\
+I’ve been doing it this way since 2021 and now I basically have a complete record of every single\
+command I’ve ever sent with this program in a long text file.  I promise it’ll come in handly.
+
+  •  •  •
+
+After that’s done, we’re gonna create a folder that will be our FFmpeg directory.\
+This is something that should never move, so keep it in a good place.\
+For me, that’s `E:\configs-programs\ffmpeg`.
+
+Now go to [Gyan’s FFmpeg builds](https://www.gyan.dev/ffmpeg/builds/) and download the one labelled `ffmpeg-git-full.7z`.\
+It’ll download the most recent version automatically, in my case that’s `ffmpeg-2026-01-29-git-c898ddb8fe-full_build.7z`.
+
+Place that in your FFmpeg directory. Right click and select “extract here” or\
+whatever similarly named option there is in the archive program you have.
+
+  •  •  •
+
+Navigate through its folder system to the `bin` folder located at `…\ffmpeg-2026-01-29-git-c898ddb8fe-full_build\bin`\
+and copy the full path to that folder; in my case `E:\configs-programs\ffmpeg\ffmpeg-2026-01-29-git-c898ddb8fe-full_build\bin`.
+
+Now, in the Windows search bar, type `variables` and you should find `Edit the system environment variables`.\
+Click on it, then press `Environment Variables` in the bottom right.
+
+Then in the *bottom* window (there are two atop one another; the bottom one, that’s labelled `System variables`),\
+find the entry that says `Path` or `PATH`, and click `Edit`.  A new window pops up, click `New`,\
+and then paste the link to the `bin` folder that you copied earlier.\
+Click `OK` on all the windows.
+
+Success!  You can now access FFmpeg from anywhere on your system.
 
 ********************************************************************************************************************************
