@@ -63,8 +63,8 @@ We call this package a container.
 You’re probably familiar with a few containers, without knowing their names, since they’re the ones that determine the file extension of the file on your computer.  
 For instance, MPEG-4 (`.mp4`), QuickTime (`.mov`), or Audio Video Interleave (`.avi`) are all examples of different containers that you may have seen.
 
-============
+********************************************************************************************************************************
 
 #	WORK IN PROGRESS
 
-============
+********************************************************************************************************************************
